@@ -1,0 +1,50 @@
+
+body{
+	background:url(b.jpg);
+	color: white;
+	background-color: white;
+	font-family: cursive;
+	padding-left: 230px;
+	font:algerian;
+}
+
+header{
+	margin-left: 250px;
+	font-size: 600%;
+	color: white;
+	font: algerian;
+
+}
+
+#name{
+	font-size: 350%;
+	font: broadway;
+
+}
+
+#btn{
+	font-size: 100%;
+	width: 200px;
+	color: white;
+	background-color: black;
+	padding: 10px;
+	font: algerian;
+	text-align: center;
+
+}
+
+#btn:hover {
+	background-color: white;
+	color: black;
+	
+}
+
+table {
+	text-align: center;
+	font: broadway;
+	padding-top: 50px;
+}
+th, td{
+	text-align: center;
+	font: broadway;
+}

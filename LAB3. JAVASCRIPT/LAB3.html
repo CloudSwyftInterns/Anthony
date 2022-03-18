@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Laboratory 3</title>
+	<link rel="stylesheet" type="text/css" href="LAB3.css">
+</head>
+<body onload="askName();">
+	<div class="name">
+		<header id="name">Welcome:</header>
+	</div>
+
+	<table class="table">
+		<tr>
+			<th id="date">DATE</th>
+			<th id="content">BSCPE</th>
+		</tr>
+		<tr>
+			<td>Show the Date</td>
+			<td>Change the Content</td>
+		</tr>
+		<tr>
+			<td><button id="btn" onclick="displayDate();">The Date is...</button></td>
+			<td><button id="btn" onclick="content()">Change...</button></td>
+		</tr>
+		</tr>
+		</tr>
+		<tr>
+			<th id="ascending">Nairobi, Rio, Berlin, Professor, Tokyo, Denver </th>
+			<th id="descending">Denver, Professor, Nairobi, Rio, Berlin, Tokyo </th>
+		<tr>
+			<td>Sort Names in Ascending Order</td>
+			<td>Sort Names in Descending Order</td>
+		</tr>
+		<tr>
+			<td><button id="btn" onclick="Ascending();">Ascending...</button></td>
+			<td><button id="btn" onclick="Descending();">Descending...</button></td>
+		</tr>
+		<tr>
+			<th id="random">X</th>
+			<th id="max">-06, 17, 10, 15, -21, 16, -22, 31, -60, 100</th>
+		<tr>
+			<td>Pick a Random Number</td>
+			<td>Get the Max or the Highest Value</td>
+		</tr>
+		<tr>
+			<td><button id="btn" onclick="document.getElementById('random').innerHTML = randomInt(0,100)">Pick...</button></td>
+			<td><button id="btn" onclick="max();">Get the Max...</button></td>
+		</tr>
+		</tr>
+	</table>
+
+	<script>
+		function  askName(){
+			var person = prompt("Please Enter your Name"," ")
+			if (person != null) {
+				document.getElementById("name").innerHTML = "Welcome! " + person + "";
+			}
+		}
+
+		function displayDate(){
+			document.getElementById("date").innerHTML = Date()
+		}
+
+		function content(){
+			document.getElementById("content").innerHTML = "Bachelor of Science in Computer Engineering";
+		}
+
+		var Names = ["Denver", "Nairobi", "Professor", "Tokyo", "Berlin", "Rio"];
+		document.getElementById("ascending").innerHTML = Names
+
+		function Ascending(){
+			Names.sort();
+			document.getElementById("ascending").innerHTML = Names
+		}
+
+		var Names = ["Rio", "Tokyo", "Professor", "Berlin", "Nairobi", "Denver"];
+		document.getElementById("descending").innerHTML = Names
+
+		function Descending(){
+			Names.sort();
+			Names.reverse();
+			document.getElementById("descending").innerHTML = Names
+		}
+
+		function randomInt(min, max){
+			return Math.floor(Math.random() * (max - min + 1)) + min
+		}
+
+		function max(){
+			document.getElementById("max").innerHTML = Math.max( -6, 17, 10, 15, -21, 16, -22, 31, -60, 100 );
+		}
+	</script>
+
+</body>
+</html>
